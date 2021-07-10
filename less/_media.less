@@ -2,6 +2,18 @@
   .container{
     width: 100%;
   }
+  .carousel{
+    .prev{
+      top: auto;
+      bottom: -70px;
+      left: 40%;
+    }
+    .next{
+      top: auto;
+      bottom: -70px;
+      right: 40%;
+    }
+  }
 }
 @media (max-width: 991px) {
   .promo{
@@ -12,6 +24,24 @@
   .preference{
     &__wrapper{
       padding: 0 10px;
+    }
+  }
+  .consultation{
+    .container{
+      padding-left: 20px;
+    }
+    &__title{
+      font-size: 30px;
+    }
+  }
+  .carousel{
+    .tns-item {
+      width: 750px;
+    }
+    &__inner{
+      img{
+        height: auto;
+      }
     }
   }
 }
@@ -34,6 +64,25 @@
       }
     }
   }
+  .consultation{
+    &__title{
+      font-size: 25px;
+    }
+  }
+  .carousel{
+    .tns-item {
+      width: 550px;
+      img{
+        width: 100%;
+      }
+    }
+    .prev{
+      left: 30%;
+    }
+    .next{
+      right: 30%;
+    }
+  }
 }
 @media (max-width: 575px) {
   .btn{
@@ -41,6 +90,10 @@
     font-size: 10px;
     &_promo{
       width: 60vw;
+      font-size: 12px;
+    }
+    &_consultation{
+      width: 270px;
       font-size: 12px;
     }
   }
@@ -77,6 +130,18 @@
       width: 100%;
       font-size: 13px;
       align-items: center;
+    }
+  }
+  .consultation{
+    &__title{
+      font-size: 20px;
+    }
+    &__description{
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    &__form{
+      width: 270px;
     }
   }
 }

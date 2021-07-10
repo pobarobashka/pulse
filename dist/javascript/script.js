@@ -1,0 +1,1 @@
+const e=tns({container:".carousel__inner",items:1,slideBy:"page",autoplay:!1,controls:!1,nav:!1});document.querySelector(".prev").addEventListener("click",function(){e.goTo("prev")}),document.querySelector(".next").addEventListener("click",function(){e.goTo("next")});
