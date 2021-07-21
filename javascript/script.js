@@ -65,6 +65,49 @@ catalog.addEventListener('click',(event)=>{
         });
     }
 })
+
+//Модальные окна
+const modal = document.querySelector('.modal'),
+    consultation = document.querySelector('[data-consultation]'),
+    order = document.querySelector('[data-order]'),
+    tnk = document.querySelector('[data-tnk]');
+function showConsultation(){
+    modal.classList.add('active');
+    consultation.classList.add('active');
+}
+function showOrder(){
+    modal.classList.add('active');
+    order.classList.add('active');
+}
+function showTnk(){
+   modal.classList.add('active');
+    tnk.classList.add('active')
+}
+function hideModal(){
+    modal.classList.remove('active');
+    document.querySelector('[data-order]').classList.remove('active');
+    document.querySelector('[data-tnk]').classList.remove('active')
+    consultation.classList.remove('active');
+
+}
+document.documentElement.addEventListener('click',(event)=>{
+    const target = event.target;
+    if (target && (target.classList.contains('btn_promo')||target.classList.contains('btn_consultation')||target.classList.contains('btn_logo'))){
+        event.preventDefault();
+        showConsultation();
+    }else if (target && target.classList.contains('btn_catalog')){
+        event.preventDefault();
+        showOrder();
+    }else if (target && target.classList.contains('btn_modal')){
+        event.preventDefault();
+        hideModal();
+        showTnk();
+    }else if (target && target.classList.contains('modal__close')){
+        hideModal();
+    }
+});
+
+
 //jquery
 // $(document).ready(function(){
 //     //табы
